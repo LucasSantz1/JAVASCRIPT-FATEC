@@ -3,22 +3,25 @@ body {
 }
 
 .formulario {
-    width: 600px;
+    width: 500px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #745f5f;
     border-radius: 8px;
+    background-color: #DAC8B3;
 }
 
 h2 {
     font-size: 26px;
     color: #000;
+    text-align: center;
+    
 }
 
 label {
     font-size: 10px;
     color: #222;
-    display: block;
+    display: line block;
     margin-bottom: 4px;
 }
 
@@ -26,20 +29,24 @@ input[type="text"], input[type="email"], input[type="date"] {
     width: calc(100% - 12px);
     padding: 8px;
     font-size: 12px;
-    border: none;
+    border: white;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     color: #999;
+}
+
+.radio-group input {
+    margin-left: 8px;
 }
 
 .erro {
     font-size: 10px;
     color: red;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 #campos_especificos {
-    margin-top: 20px;
+    margin-top: 14px;
     display: block;  
 }
 
@@ -47,11 +54,11 @@ input[type="text"], input[type="email"], input[type="date"] {
 #campos_especificos input[type="text"] {
     display: block; 
     width: 100%; 
-    margin-bottom: 16px; 
+    margin-bottom: 12px; 
 }
 
 #campos_especificos input[type="text"] {
-    padding: 8px;
+    padding: 6px;
     font-size: 12px;
     border: none;
     border-bottom: 1px solid #ccc;
@@ -63,13 +70,12 @@ input[type="text"], input[type="email"], input[type="date"] {
     gap: 8px;
 }
 
-.radio-group input {
-    margin-left: 10px;
-}
+
 
 .buttons {
     display: flex;
     justify-content: space-between;
+    border-radius: 4px;
 }
 
 .buttons input {
@@ -79,3 +85,5 @@ input[type="text"], input[type="email"], input[type="date"] {
     background-color: #eee;
     font-size: 12px;
 }
+
+
