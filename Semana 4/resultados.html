@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Preenchido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resultado">
+        <h2>Formulário Preenchido</h2>
+        <p>Seus dados preenchidos são:</p>
+        
+        <ul id="dados_usuario"></ul>
+    </div>
+
+    <script>
+        function getParametrosURL() {
+            const params = new URLSearchParams(window.location.search);
+            const lista = document.getElementById('dados_usuario');
+            let html = '';
+
+            const campos = [
+                { chave: 'nome', label: 'Nome' },
+                { chave: 'email', label: 'Email' },
+                { chave: 'data_nascimento', label: 'Data de Nascimento' },
+                { chave: 'telefone_fixo', label: 'Telefone Fixo' },
+                { chave: 'telefone_celular', label: 'Telefone Celular' },
+                { chave: 'curso', label: 'Curso' },
+                { chave: 'matricula', label: 'Matrícula' },
+                { chave: 'area', label: 'Área' },
+                { chave: 'lattes', label: 'Lattes' }
+            ];
+
+            campos.forEach(campo => {
+                const valor = params.get(campo.chave);
+                if (valor) {
+                    html += `<li><strong>${campo.label}:</strong> ${valor}</li>`;
+                }
+            });
+
+            lista.innerHTML = html;
+        }
+
+        getParametrosURL();
+    </script>
+</body>
+</html>

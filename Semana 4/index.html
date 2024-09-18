@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formulario">
+        <h2>Formulário de Cadastro:</h2>
+
+        <form id="cadastroForm" action="resultados.html" method="GET" onsubmit="return validarFormulario()">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+            <div id="nome_erro" class="erro"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+            <div id="email_erro" class="erro"></div>
+
+            <label for="data_nascimento">Data Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento">
+            <div id="data_nascimento_erro" class="erro"></div>
+
+            <label for="telefone_fixo">Telefone Fixo:</label>
+            <input type="text" id="telefone_fixo" name="telefone_fixo" placeholder="(xx)xxxx-xxxx" oninput="formatarTelefone(this)">
+            <div id="telefone_fixo_erro" class="erro"></div>
+
+            <label for="telefone_celular">Telefone Celular:</label>
+            <input type="text" id="telefone_celular" name="telefone_celular" placeholder="(xx)xxxxx-xxxx" oninput="formatarTelefone(this)">
+            <div id="telefone_celular_erro" class="erro"></div>
+
+            <div class="radio-group">
+                <input type="radio" id="professor" name="tipo_usuario" value="Professor" onclick="alternarCampos()">
+                <label for="professor">Professor</label>
+                <input type="radio" id="aluno" name="tipo_usuario" value="Aluno" onclick="alternarCampos()" checked>
+                <label for="aluno">Aluno</label>
+            </div>
+
+            <div id="campos_especificos"></div>
+
+            <div class="buttons">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Redefinir">
+            </div>
+        </form>
+    </div>
+
+    <script src="validacao.js"></script>
+</body>
+</html>
