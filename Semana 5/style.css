@@ -1,0 +1,111 @@
+:root {
+    --primary-color: #3498db;
+    --primary-color-hover: #2980b9;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --container-background: #fff;
+    --task-background: #f9f9f9;
+    --border-radius: 8px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    color: var(--text-color);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: var(--container-background);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  #form-tarefa input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+  }
+  
+  #form-tarefa button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  #form-tarefa button:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
+  #lista-tarefas {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #lista-tarefas li {
+    background-color: var(--task-background);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-info {
+    flex: 1;
+  }
+  
+  .task-name {
+    font-weight: bold;
+  }
+  
+  .task-status {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .buttons {
+    display: flex;
+  }
+  
+  .button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
